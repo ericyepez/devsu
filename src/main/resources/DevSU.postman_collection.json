@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "59d95552-bf9d-44b9-a976-7d5118f3ca9e",
+		"name": "DevSU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28979918"
+	},
+	"item": [
+		{
+			"name": "RegistroClientes",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contrasena\": \"qwerty\",\r\n    \"estado\": true,\r\n    \"nombre\": \"Lizbet Vasquez\",\r\n    \"genero\": \"femenino\",\r\n    \"edad\": 37,\r\n    \"identificacion\": \"43352277\",\r\n    \"direccion\": \"av garcilazo\",\r\n    \"telefono\": \"984398587\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{servidor}}:{{puerto}}/clientes",
+					"protocol": "http",
+					"host": [
+						"{{servidor}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Exito",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasena\": \"qwerty\",\r\n    \"estado\": true,\r\n    \"nombre\": \"Lizbet Vasquez\",\r\n    \"genero\": \"femenino\",\r\n    \"edad\": 37,\r\n    \"identificacion\": \"43352277\",\r\n    \"direccion\": \"av garcilazo\",\r\n    \"telefono\": \"984398587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/clientes",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 01:54:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"nombre\": \"Lizbet Vasquez\",\n    \"contrasena\": \"qwerty\",\n    \"genero\": \"femenino\",\n    \"estado\": true,\n    \"edad\": 37,\n    \"direccion\": \"av garcilazo\",\n    \"telefono\": \"984398587\",\n    \"identificacion\": \"43352277\"\n}"
+				}
+			]
+		},
+		{
+			"name": "RegistrarCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\":\"123456\",\r\n    \"tipoCuenta\":\"Ahorro\",\r\n    \"saldo\":1000,\r\n    \"estado\":true,\r\n    \"cliente\":{\r\n        \"id\":1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{servidor}}:{{puerto}}/cuentas",
+					"protocol": "http",
+					"host": [
+						"{{servidor}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Exito",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\":\"123456\",\r\n    \"tipoCuenta\":\"Ahorro\",\r\n    \"saldoInicial\":1000,\r\n    \"estado\":true,\r\n    \"cliente\":{\r\n        \"id\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/cuentas",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 01:54:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"123456\",\n    \"tipoCuenta\": \"Ahorro\"\n}"
+				}
+			]
+		},
+		{
+			"name": "RegistroMovimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\": 123456,\r\n    \"tipoMovimiento\": \"Ahorro\",\r\n    \"estado\": true,\r\n    \"descripcion\": \"Deposito de 1750\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{servidor}}:{{puerto}}/movimientos",
+					"protocol": "http",
+					"host": [
+						"{{servidor}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"movimientos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CupoDiarioExcedido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": 123456,\r\n    \"tipoMovimiento\": \"Ahorro\",\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"descripcion\": \"Retiro de 1575\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 00:24:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-09-04T00:24:00.749+00:00\",\n    \"mensaje\": \"Cupo diario excedido\",\n    \"detalles\": \"uri=/movimientos\",\n    \"httpCodeMessage\": \"Internal Server Error\"\n}"
+				},
+				{
+					"name": "SaldoNoDisponible",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": 123456,\r\n    \"tipoMovimiento\": \"Ahorro\",\r\n    \"saldoInicial\": 2000,\r\n    \"estado\": true,\r\n    \"descripcion\": \"Retiro de 3575\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 00:27:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-09-04T00:27:14.340+00:00\",\n    \"mensaje\": \"Saldo no disponible\",\n    \"detalles\": \"uri=/movimientos\",\n    \"httpCodeMessage\": \"Internal Server Error\"\n}"
+				},
+				{
+					"name": "Exito",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": 123456,\r\n    \"tipoMovimiento\": \"Ahorro\",\r\n    \"estado\": true,\r\n    \"descripcion\": \"Retiro de 575\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/movimientos",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 03:14:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"fecha\": \"2023-09-04T03:14:44.610+00:00\",\n    \"tipoMovimiento\": \"Retiro\",\n    \"valor\": 575,\n    \"numeroCuenta\": \"123456\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{servidor}}:{{puerto}}/reportes/obtener-reporte?fechaInicio=2023-09-03&fechaFin=2023-09-03&idCliente=1",
+					"protocol": "http",
+					"host": [
+						"{{servidor}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"reportes",
+						"obtener-reporte"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2023-09-03"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2023-09-03"
+						},
+						{
+							"key": "idCliente",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Exito",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/reportes/obtener-reporte?fechaInicio=2023-09-03&fechaFin=2023-09-03&idCliente=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"reportes",
+								"obtener-reporte"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-09-03"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-09-03"
+								},
+								{
+									"key": "idCliente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 03:15:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 0,\n        \"movimiento\": 1000,\n        \"saldoDisponible\": 1000,\n        \"tipoMovimiento\": \"Deposito\",\n        \"estado\": true\n    },\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 1000,\n        \"movimiento\": 575,\n        \"saldoDisponible\": 425,\n        \"tipoMovimiento\": \"Retiro\",\n        \"estado\": true\n    }\n]"
+				},
+				{
+					"name": "4Operaciones",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{servidor}}:{{puerto}}/reportes/obtener-reporte?fechaInicio=2023-09-03&fechaFin=2023-09-03&idCliente=1",
+							"protocol": "http",
+							"host": [
+								"{{servidor}}"
+							],
+							"port": "{{puerto}}",
+							"path": [
+								"reportes",
+								"obtener-reporte"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023-09-03"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023-09-03"
+								},
+								{
+									"key": "idCliente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 04 Sep 2023 03:16:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 0,\n        \"movimiento\": 1000,\n        \"saldoDisponible\": 1000,\n        \"tipoMovimiento\": \"Deposito\",\n        \"estado\": true\n    },\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 1000,\n        \"movimiento\": 575,\n        \"saldoDisponible\": 425,\n        \"tipoMovimiento\": \"Retiro\",\n        \"estado\": true\n    },\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 425,\n        \"movimiento\": 175,\n        \"saldoDisponible\": 250,\n        \"tipoMovimiento\": \"Retiro\",\n        \"estado\": true\n    },\n    {\n        \"fecha\": \"03/09/2023\",\n        \"cliente\": \"Lizbet Vasquez\",\n        \"numeroCuenta\": \"123456\",\n        \"tipoCuenta\": \"Ahorro\",\n        \"saldoInicial\": 250,\n        \"movimiento\": 1750,\n        \"saldoDisponible\": 2000,\n        \"tipoMovimiento\": \"Deposito\",\n        \"estado\": true\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "servidor",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "puerto",
+			"value": "8080",
+			"type": "string"
+		}
+	]
+}
